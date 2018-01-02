@@ -1,25 +1,20 @@
 {
   "name": "node-api",
-  "version": "1.0.0",
-  "description": "A sample node application for REST API",
-  "main": "app.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/brahma5/node-api.git"
-  },
-  "keywords": [],
-  "author": "Brahmanand",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/brahma5/node-api/issues"
-  },
-  "homepage": "https://github.com/brahma5/node-api#readme",
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.2",
-    "mysql": "^2.15.0"
+    "body-parser": "~1.18.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "debug": "~2.6.9",
+    "express": "^4.15.5",
+    "jade": "^1.11.0",
+    "morgan": "^1.9.0",
+    "mysql": "^2.15.0",
+    "pug": "^2.0.0-rc.4",
+    "serve-favicon": "^2.4.5"
   }
 }
