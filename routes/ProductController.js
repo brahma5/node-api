@@ -51,5 +51,36 @@ router.delete('/:id',function(req,res,next) {
 		 }
 	 });
  });
+
+ router.get('/:category', function(req,resp,next){
+	 product.getProductByCategory(req.params.category,function(err,rows){
+		if(err) {
+			resp.json(err);
+		} else {
+			resp.json(rows);
+		}
+	 });
+ });
+
+ router.get('/List/:price?',function(req,resp,next){
+	 if(req.params.price) {
+	 product.getpriceWiseList(req.params.price,function(err,rows){
+		 if(err) {
+			 resp.json(err);
+		 } else {
+			 resp.json(rows);
+		 }
+	 });
+	}
+	else {
+		product.getSortedList(function(err,rows){
+			if(err) {
+				resp.json(err);
+			} else {
+				resp.json(rows);
+			}
+		});
+	}
+ });
  module.exports=router;
 
